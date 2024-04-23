@@ -1,7 +1,7 @@
 /*
  * list.c
  *
- *  Created on: 21 áàôø 2016
+ *  Created on: 21 Ã¡Ã Ã´Ã¸ 2016
  *      Author: batel
  */
 
@@ -259,6 +259,7 @@ ListResult listSort(List list, CompareListElements compareElement) {
 	assert(list->copy && list->free);
 	List list_sort = listCreate(list->copy, list->free);
 	if (!list_sort) {
+		free(elements_array);
 		return LIST_OUT_OF_MEMORY;
 	}
 
