@@ -267,7 +267,7 @@ ListResult listSort(List list, CompareListElements compareElement) {
 		if (listInsertLast(list_sort, elements_array[i])
 				== LIST_OUT_OF_MEMORY) {
 			listDestroy(list_sort);
-			freeArray(elements_array, size, list_sort->free);
+			freeArray(elements_array, i, list_sort->free);
 			free(elements_array);
 			return LIST_OUT_OF_MEMORY;
 		}
